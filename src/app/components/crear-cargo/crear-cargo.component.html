@@ -1,0 +1,34 @@
+<div class="card">
+    <form [formGroup]= "cargoForm">
+    <div class="form-row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label >Código</label>
+                </div>
+                    <div class="form-row">
+                        <input type="text" class="form-control" formControlName="codigo"  placeholder="Ingrese código">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label >Nombre</label>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" class="form-control" formControlName="nombre"  placeholder="Ingrese nombre">
+                    </div>
+                </div>
+                <div class="form-row mt-4" >
+                    <div class="col-md-6" >
+                        <button class="btn btn-primary" (click)="onFormSubmit()">Crear</button>
+                        <div class="alert alert-dismissible alert-success" *ngIf="alert">
+                             <strong>Cargo creado</strong> 
+                        </div>
+                    </div>
+                </div>
+         
+    </div>
+    </form> 
+          
+</div>
+
+

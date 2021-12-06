@@ -1,0 +1,17 @@
+<div class="search">
+    <input type="text" style="width: 300px;" id="cons" name="cons" [(ngModel)]="cons" placeholder="Ingrese identificación para eliminar">
+    <button (click) ="deleteCargos(cons)"  class="btn btn-primary">Eliminar</button> 
+    <div class="alert alert-dismissible alert-success" *ngIf="alert">
+        <strong>Cargo eliminado con éxito</strong> 
+    </div>
+    <div>
+        <div class="alert alert-dismissible alert-danger" *ngIf="alertexist">
+            <strong>La identificación es errónea o no se encuentra en la base de datos</strong> 
+        </div>
+    </div>
+</div>
+
+
+
+
+

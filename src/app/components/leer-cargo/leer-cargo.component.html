@@ -1,0 +1,25 @@
+<div class="search">
+    <input type="text" style="width: 300px;" id="cons" name="cons" [(ngModel)]="cons" placeholder="Ingrese el id de la empresa para buscar">
+    <button (click) ="getCargosDetails(cons)"  class="btn btn-primary">Obtener</button> 
+</div>
+ <div class="col-md-8 mt-4 mb-4">
+     <div class="table table-bordered">
+         <thead>
+             <tr>
+                 <th>Consecutivo</th>
+                 <th>Empresa</th>
+                 <th>Codigo</th>
+                 <th>Nombre</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr *ngFor="let cargo of cargos">
+                 <td>{{ cargo.consecutivo}}</td>
+                 <td>{{ cargo.empresa }}</td>
+                 <td>{{ cargo.codigo }}</td>
+                 <td>{{ cargo.nombre }}</td>
+             </tr>
+         </tbody>
+     </div>
+     
+ </div>
